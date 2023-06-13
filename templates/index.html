@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DIMENSION MEASUREMENT OF A MASKED IMAGE</title>
+</head>
+<body>
+    <h1>DIMENSION MEASUREMENT OF A MASKED IMAGE</h1>
+    <form action="{{ url_for('mask_image') }}" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    {% if input_data %}
+        <h2>Input Image:</h2>
+        <img src="data:image/png;base64,{{ input_data }}" alt="Input Image">
+    {% endif %}
+    {% if preprocessed_data %}
+        <h2>Preprocessed Image:</h2>
+        <img src="data:image/png;base64,{{ preprocessed_data }}" alt="Preprocessed Image">
+    {% endif %}
+</body>
+</html>
+
+
+
+
+
+
