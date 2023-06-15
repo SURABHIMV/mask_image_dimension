@@ -1,0 +1,1 @@
+web: gunicorn dimension_measurement_app:app
